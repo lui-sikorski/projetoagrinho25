@@ -1,0 +1,24 @@
+
+
+:root{
+    --cor-primaria: #f7e9a3;
+    --cor-secundaria: #f1c24b;
+    --cor-terciaria: #d89f26;
+    --cor-quarternaria: #b76b1d;
+}
+
+
+
+.cabecalho{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    padding: 15px 0;
+}
+
+.menu_cabecalho{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
