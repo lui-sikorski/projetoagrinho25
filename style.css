@@ -1,5 +1,4 @@
 
-
 :root{
     --cor-primaria: #f7e9a3;
     --cor-secundaria: #f1c24b;
@@ -21,4 +20,40 @@
     width: 30%;
     display: flex;
     justify-content: space-evenly;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .sidebar {
+  left: 0;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; 
+  width: 250px;
+  height: 100%;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  transition: left 0.3s ease;
+  z-index: 1;
 }
