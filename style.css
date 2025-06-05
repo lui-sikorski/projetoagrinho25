@@ -1,6 +1,13 @@
+:root{
+  --cor-primaria:#FEFAE0;
+  --cor-secundaria:#606C38;
+  --cor-tercearia:#283618;
+  --cor-quaternaria:#DDA15E;
+}
+
 /* Estilos Gerais */
 body {
-    font-family: sans-serif;
+    font-family: Georgia;
     margin: 0;
     background-color: #f4f4f4;
     color: #333;
