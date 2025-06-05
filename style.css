@@ -1,59 +1,116 @@
-
-:root{
-    --cor-primaria: #f7e9a3;
-    --cor-secundaria: #f1c24b;
-    --cor-terciaria: #d89f26;
-    --cor-quarternaria: #b76b1d;
+/* Estilos Gerais */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-
-
-.cabecalho{
+.container {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--cor-primaria);
-    padding: 15px 0;
+    min-height: 100vh; /* Garante que o container ocupe toda a altura da tela */
 }
 
-.menu_cabecalho{
-    width: 30%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.titulo{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.5em;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-#menu-toggle:checked ~ .sidebar {
-  left: 0;
-}
-
-.menu-btn {
-  position: fixed;
-  top: 5px;
-  left: 5px;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  z-index: 2;
-}
-
+/* Barra Lateral */
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px; 
-  width: 250px;
-  height: 100%;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
-  transition: left 0.3s ease;
-  z-index: 1;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out; /* Para animação suave */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.main-content header h1 {
+    margin-top: 0;
+}
+
+/* Checkbox para o menu hamburguer (opcional, mas útil para mobile) */
+#menu-toggle {
+    display: none; /* Esconde o checkbox */
+}
+
+.menu-icon {
+    display: none; /* Esconde o ícone do menu por padrão em telas grandes */
+    cursor: pointer;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os itens verticalmente */
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto; /* Altura automática para o conteúdo */
+        transform: translateX(-100%); /* Esconde a barra lateral fora da tela */
+        position: absolute; /* Ou fixed, dependendo do efeito desejado */
+        z-index: 1000; /* Garante que fique sobre o conteúdo */
+        padding-top: 60px; /* Espaço para o botão do menu, se fixo no topo */
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone do menu em telas pequenas */
+        position: fixed; /* Ou absolute, dependendo de onde quer fixá-lo */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1001; /* Acima da sidebar */
+        background-color: #222; /* Um pouco mais escuro para destaque */
+    }
+
+    /* Quando o checkbox está marcado, mostra a sidebar */
+    #menu-toggle:checked ~ .container .sidebar {
+        transform: translateX(0);
+    }
+
+    #menu-toggle:checked ~ .menu-icon {
+        background-color: #444; /* Muda a cor quando ativo */
+    }
+
+    .main-content {
+        padding-top: 70px; /* Ajusta o padding para não sobrepor o menu icon */
+    }
+}
+
+/* Estilos adicionais para uma transição mais suave ao abrir/fechar (opcional) */
+@media (min-width: 769px) {
+    .sidebar {
+        transform: translateX(0) !important; /* Garante que a sidebar esteja visível em telas grandes */
+        position: static; /* Remove o posicionamento absoluto */
+    }
 }
