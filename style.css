@@ -20,16 +20,19 @@ body {
 
 /* Barra Lateral */
 .sidebar {
-    width: 250px;
+    width: 300px;
     background-color: #333;
     color: #fff;
     padding: 20px;
     transition: transform 0.3s ease-in-out; /* Para animação suave */
 }
 
-.sidebar h2 {
+.sidebar_titulo {
     margin-top: 0;
     text-align: center;
+    color: var(--cor-secundaria);
+    font-size: 25px;
+    padding-bottom: 15px;
 }
 
 .sidebar ul {
@@ -61,6 +64,33 @@ body {
     margin-top: 0;
 }
 
+.principal{
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.div_texto{
+    width: 50%;
+}
+
+.principal_titulo{
+    font-size: 50px;
+    color: var(--cor-secundaria);
+    padding-bottom: 30px;
+}
+
+.principal_texto{
+    color: var(--cor-quaternaria);
+}
+
+.principal_img{
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 16px;
+    width: 50%;
+}
+
 /* Checkbox para o menu hamburguer (opcional, mas útil para mobile) */
 #menu-toggle {
     display: none; /* Esconde o checkbox */
@@ -80,6 +110,11 @@ body {
     .container {
         flex-direction: column; /* Empilha os itens verticalmente */
     }
+
+    .sidebar_titulo{
+        display: none;
+    }
+
 
     .sidebar {
         width: 100%;
