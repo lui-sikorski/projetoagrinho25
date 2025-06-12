@@ -1,46 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoturismo litoral do Paraná</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pontal do Paraná</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <input type="checkbox" id="menu-toggle" />
+  <label class="menu-icon" for="menu-toggle">☰ Menu</label>
 
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776; Menu</label>
+  <div class="container">
+    <nav class="sidebar">
+      <h2 class="sidebar_titulo">Menu</h2>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="pontaldo.html">Pontal do Paraná</a></li>
+        <li><a href="guaratuba.html">Guaratuba</a></li>
+        <li><a href="matinhos.html">Matinhos</a></li>
+        <li><a href="acessibilidade.html">Acessibilidade</a></li>
+      </ul>
+    </nav>
 
-    <div class="container">
-        <aside class="sidebar">
-            <h2>Menu Lateral</h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="Paranaguá.html">Paranaguá</a></li>
-                    <li><a href="guaraquçaba.html">Guaraqueçaba</a></li>
-                    <li><a href="antoninaemorretes.html">Antonina e Morretes</a></li>
-                    <li><a href="guratuba.html">Guaratbua</a></li>
-                    <li><a href="pontaldoparana.html">Pontal do Paraná</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <main class="main-content">
+      <section class="principal">
+        <h1 class="principal_titulo">Pontal do Paraná</h1>
+      </section>
 
-        <main class="main-content">
-            <header>
-                <h1>Pontal do Paraná</h1>
-            </header>
-            <section>
-                <p>Este é o conteúdo principal da sua página. Ele se ajustará ao lado da barra lateral em telas maiores e abaixo dela (ou com a barra lateral oculta e acessível por um botão) em telas menores.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </section>
-            <section>
-                <h2>Outra Seção</h2>
-                <p>Mais conteúdo aqui...</p>
-            </section>
-        </main>
-    </div>
+      <h2 class="sidebar_titulo" >Praias</h2>
 
+      <section class="atrativos-container">
+
+        <!-- Praia de Leste -->
+        <div class="atrativo">
+          <div class="atrativo-texto">
+            <h3>Praia de Leste</h3>
+            <p>
+              A Praia de Leste é uma das mais movimentadas de Pontal do Paraná. Com uma faixa de areia bem extensa e um mar com ondas moderadas, é ótima pra quem curte tomar banho de mar, caminhar ou praticar esportes na areia. A orla tem calçadão, ciclovia, quiosques, restaurantes e várias opções de hospedagem. No verão, rolam eventos e atividades culturais que atraem muita gente.
+            </p>
+          </div>
+          <div class="atrativo-imagem">
+            <img src="imagens/praia-de-leste.jpg" alt="Praia de Leste">
+          </div>
+        </div>
+
+        <!-- Praia de Ipanema -->
+        <div class="atrativo">
+          <div class="atrativo-texto">
+            <h3>Praia de Ipanema</h3>
+            <p>
+              Bem no centro de Pontal do Paraná, a Praia de Ipanema é famosa pela boa estrutura e pelas paisagens bonitas. O mar tem ondas moderadas, bom pra banho e esportes como frescobol e vôlei. O calçadão é cheio de árvores, com quiosques e comércios variados. É muito procurada por famílias e grupos de amigos.
+            </p>
+          </div>
+          <div class="atrativo-imagem">
+            <img src="imagens/praia-de-ipanema.jpg" alt="Praia de Ipanema">
+          </div>
+        </div>
+
+        <!-- Praia de Shangri-lá -->
+        <div class="atrativo">
+          <div class="atrativo-texto">
+            <h3>Praia de Shangri-lá</h3>
+            <p>
+              A Praia de Shangri-lá é ideal pra quem quer tranquilidade. Com mar calmo e uma faixa de areia larga, é perfeita pra relaxar e curtir a natureza. A região é bem residencial, com ruas arborizadas e pouco movimento, mesmo na alta temporada.
+            </p>
+          </div>
+          <div class="atrativo-imagem">
+            <img src="imagens/shangrila.jpg" alt="Praia de Shangri-lá">
+          </div>
+        </div>
+
+        <!-- Balneário Santa Terezinha -->
+        <div class="atrativo">
+          <div class="atrativo-texto">
+            <h3>Praia do Balneário Santa Terezinha</h3>
+            <p>
+              Essa é uma das praias mais sossegadas de Pontal do Paraná. É pouco frequentada, com águas limpas e calmas. A orla tem vegetação nativa bem preservada, ótima pra caminhadas e pra quem curte observar a natureza num clima de paz.
+            </p>
+          </div>
+          <div class="atrativo-imagem">
+            <img src="imagens/santa-terezinha.jpg" alt="Balneário Santa Terezinha">
+          </div>
+        </div>
+
+        <!-- Parque Nacional Marinho -->
+        <div class="atrativo">
+          <div class="atrativo-texto">
+            <h3>Parque Nacional Marinho das Ilhas dos Currais</h3>
+            <p>
+              Esse parque marinho fica a uns 6 km da costa e é formado por três ilhas rochosas. Criado pra proteger a vida marinha e as aves migratórias, só dá pra chegar lá de barco e o desembarque nas ilhas é restrito. É um ótimo lugar pra mergulho ecológico, observação de aves e fotos da natureza.
+            </p>
+          </div>
+          <div class="atrativo-imagem">
+            <img src="imagens/ilhas-dos-currais.jpg" alt="Ilhas dos Currais">
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
 </body>
 </html>
