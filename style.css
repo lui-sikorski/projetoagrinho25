@@ -203,6 +203,18 @@ body {
     .main-content {
         padding-top: 70px;
     }
+
+    .atrativo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .atrativo:nth-child(even) {
+        flex-direction: column;
+    }
+
 }
 
 @media (min-width: 769px) {
