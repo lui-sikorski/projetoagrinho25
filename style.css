@@ -108,7 +108,7 @@ body {
 .atrativo {
     display: flex;
     gap: 20px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .atrativo:nth-child(even) {
@@ -127,6 +127,8 @@ body {
 }
 
 .atrativo-texto {
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 

@@ -1,0 +1,172 @@
+:root {
+    --cor-primaria: #FEFAE0;
+    --cor-secundaria: #606C38;
+    --cor-tercearia: #283618;
+    --cor-quaternaria: #DDA15E;
+}
+
+.main_index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--cor-tercearia);
+}
+
+.textos {
+    display: flex;
+    padding: 1rem;
+}
+
+.textos h2 {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.textos p {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.text__principal {
+    width: 40%;
+}
+
+.text__jornada {
+    width: 60%;
+}
+
+.visita {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.visita strong{
+    font-size: 2rem;
+}
+
+.vista p{
+    font-size: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    /* Duas linhas e três colunas. As colunas terão largura igual (1fr). */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    /* As linhas se ajustam ao conteúdo */
+    gap: 25px;
+    /* Espaçamento entre os cards */
+    max-width: 1200px;
+    /* Largura máxima do grid */
+    margin: 0 auto;
+    /* Centraliza o grid na página */
+    padding: 20px;
+}
+
+/* --- Estilo do Card --- */
+.card {
+    background-color: var(--cor-primaria);
+    border-radius: 10px;
+    /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    overflow: hidden;
+    /* Garante que a imagem arredondada não "escape" */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* Efeito hover */
+    display: flex;
+    /* Para centralizar o conteúdo dentro do card */
+    flex-direction: column;
+    /* Conteúdo em coluna */
+    justify-content: flex-start;
+    /* Alinha o conteúdo ao topo */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Move o card um pouco para cima no hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra mais forte no hover */
+}
+
+.card img {
+    width: 100%;
+    /* Imagem ocupa 100% da largura do card */
+    height: 200px;
+    /* Altura fixa para as imagens */
+    object-fit: cover;
+    /* Garante que a imagem cubra a área sem distorcer */
+    border-bottom: 1px solid #eee;
+    /* Linha sutil abaixo da imagem */
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+    /* Permite que o conteúdo expanda e ocupe o espaço restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Espaço entre título e descrição se houver mais conteúdo */
+    width: 100%;
+    /* Ocupa a largura total do padding */
+}
+
+.card-content h2 {
+    font-size: 1.4em;
+    color: var(--cor-tercearia);
+    /* Cor azul para o título */
+    margin-top: 0;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    /* Evita que o título quebre linha */
+    overflow: hidden;
+    /* Esconde o excesso de texto */
+    text-overflow: ellipsis;
+    /* Adiciona "..." se o texto for muito longo */
+}
+
+.card-content p {
+    font-size: 0.95em;
+    color: var(--cor-secundaria);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* --- Responsividade para Telas Menores --- */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        /* 1 coluna em celulares */
+        padding: 10px;
+    }
+
+    .card-content h2 {
+        font-size: 1.2em;
+    }
+
+    .card-content p {
+        font-size: 0.9em;
+    }
+}
