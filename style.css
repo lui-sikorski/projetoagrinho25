@@ -20,7 +20,7 @@ body {
 
 /* Barra Lateral */
 .sidebar {
-    width: 300px;
+    width: 8rem;
     background-color: var(--cor-tercearia);
     color: var(--cor-primaria);
     padding: 20px;
