@@ -2,54 +2,116 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoturismo litoral do Paraná</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pontal do Paraná</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">&#9776; Menu</label>
 
     <div class="container">
-        <aside class="sidebar">
-            <h2>Menu Lateral</h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="Paranaguá.html">Paranaguá</a></li>
-                    <li><a href="guaraquçaba.html">Guaraqueçaba</a></li>
-                    <li><a href="antoninaemorretes.html">Antonina e Morretes</a></li>
-                    <li><a href="guratuba.html">Guaratbua</a></li>
-                    <li><a href="pontaldoparana.html">Pontal do Paraná</a></li>
-                    <li><a href="matinhos.html">Matinhos</a></li>
-                </ul>
-            </nav>
-        </aside>
+        <nav class="sidebar">
+            <h2 class="sidebar_titulo">Menu Lateral</h2>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Paranaguá.html">Paranaguá</a></li>
+                <li><a href="guaraquecaba.html">Guaraqueçaba</a></li>
+                <li><a href="morretes.html">Morretes</a></li>
+                <li><a href="guaratuba.html">Guaratbua</a></li>
+                <li><a href="pontaldoparana.html">Pontal do Paraná</a></li>
+                <li><a href="matinhos.html">Matinhos</a></li>
+            </ul>
+        </nav>
 
         <main class="main-content">
-            <header>
-                <h1>Paranaguá</h1>
-            </header>
-            <section>
-                <p>Este é o conteúdo principal da sua página. Ele se ajustará ao lado da barra lateral em telas maiores
-                    e abaixo dela (ou com a barra lateral oculta e acessível por um botão) em telas menores.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                    anim id est laborum.</p>
+            <section class="principal">
+                <h1 class="principal_titulo">Paranaguá</h1>
             </section>
-            <section>
-                <h2>Outra Seção</h2>
-                <p>Mais conteúdo aqui...</p>
+
+            <h2 class="sidebar_titulo">Ilha do Mel</h2>
+
+            <section class="atrativos-container">
+
+
+                <div class="atrativo">
+                    <div class="atrativo-texto">
+                        <h3>Praia do farol</h3>
+                        <p>
+                            Fica na Vila de Nova Brasília, bem perto do Farol das Conchas, que está no alto de um morro.
+                            A vista lá de cima é incrível e mostra boa parte da ilha. Um dos lugares mais famosos e
+                            bonitos do Paraná.
+                        </p>
+                    </div>
+                    <div class="atrativo-imagem">
+                        <img src="imagens/praia do farol.jpg" alt="Praia do farol">
+                    </div>
+                </div>
+
+
+                <div class="atrativo">
+                    <div class="atrativo-texto">
+                        <h3>Praia de fora</h3>
+                        <p>
+                            Essa é pra quem gosta de lugares isolados e natureza bruta. A Praia de Fora é bem preservada
+                            e só dá pra chegar por trilha. Ideal pra relaxar em silêncio e se desconectar.
+                        </p>
+                    </div>
+                    <div class="atrativo-imagem">
+                        <img src="imagens/praia de fora.jpeg" alt="Praia de fora">
+                    </div>
+                </div>
+
+
+                <div class="atrativo">
+                    <div class="atrativo-texto">
+                        <h3>Gruta das Encantadas</h3>
+                        <p>
+                            Formação rochosa cheia de lendas de sereias, localizada na Vila de Encantadas. O acesso é
+                            por passarelas e o visual é diferente de tudo. Um dos pontos mais místicos da ilha.
+                        </p>
+                    </div>
+                    <div class="atrativo-imagem">
+                        <img src="imagens/gruta das encantadas.jpeg" alt="Gruta das Encantadas">
+                    </div>
+                </div>
+
+
+                <div class="atrativo">
+                    <div class="atrativo-texto">
+                        <h3>Fortaleza de Nossa Senhora dos Prazeres</h3>
+                        <p>
+                            Fica no norte da ilha, foi construída no século XVIII e tem trilhas, mirantes e painéis com
+                            a história do lugar. Uma mistura de natureza, cultura e história num só passeio.
+                        </p>
+                    </div>
+                    <div class="atrativo-imagem">
+                        <img src="imagens/fortaleza nossa senhora dos prazeres.jpeg" alt="Fortaleza de Nossa Senhora dos Prazeres">
+                    </div>
+                </div>
+
+                <h2 class="sidebar_titulo">Paranaguá </h2>
+
+
+                <div class="atrativo">
+                    <div class="atrativo-texto">
+                        <h3>Baía de Paranaguá</h3>
+                        <p>
+                            É um dos maiores estuários do sul do Brasil, cercado por manguezais e ilhas. A baía é cheia
+                            de vida e perfeita pra passeios de barco, observação de aves e conhecer comunidades
+                            tradicionais.
+                        </p>
+                    </div>
+                    <div class="atrativo-imagem">
+                        <img src="imagens/baía de paranaguá.jpeg" alt="Baía de Paranaguá">
+                    </div>
+                </div>
+
             </section>
         </main>
     </div>
-
 </body>
 
 </html>
