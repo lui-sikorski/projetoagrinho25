@@ -1,0 +1,171 @@
+:root {
+    --cor-primaria: #FEFAE0;
+    --cor-secundaria: #606C38;
+    --cor-tercearia: #283618;
+    --cor-quaternaria: #DDA15E;
+}
+
+.main_index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--cor-tercearia);
+    padding: 1rem; /* Adicionado para evitar que o texto encoste nas bordas */
+}
+
+.textos {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem; /* Adicionado para espaçamento entre as colunas */
+}
+
+.textos h2 {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.textos p {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.text__principal {
+    width: 40%;
+}
+
+.text__jornada {
+    width: 60%;
+}
+
+.visita {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.visita strong {
+    font-size: 2rem;
+}
+
+.visita p {
+    font-size: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Estilo do Card --- */
+.card {
+    background-color: var(--cor-primaria);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-content h2 {
+    font-size: 1.4em;
+    color: var(--cor-tercearia);
+    margin-top: 0;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-content p {
+    font-size: 0.95em;
+    color: var(--cor-secundaria);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* --- Responsividade para Telas Menores (Tablets) --- */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+
+    .visita {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para os avisos */
+    }
+}
+
+/* --- Responsividade para Telas Pequenas (Celulares) --- */
+@media (max-width: 600px) {
+
+    .titulo {
+        font-size: 2.2rem; /* Ajuste no tamanho do título */
+    }
+
+    .textos {
+        padding: 10px;
+        flex-direction: column; /* Coloca os textos um abaixo do outro */
+    }
+
+    .text__principal,
+    .text__jornada {
+        width: 100%; /* Ocupa a largura total */
+    }
+
+    .visita {
+        padding: 10px;
+        display: flex; /* Altera para flexbox para controle de coluna */
+        flex-direction: column; /* Coloca os avisos um abaixo do outro */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+        padding: 10px;
+    }
+
+    .card-content h2 {
+        font-size: 1.2em;
+    }
+
+    .card-content p {
+        font-size: 0.9em;
+    }
+}
