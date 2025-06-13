@@ -87,14 +87,7 @@ body {
     box-sizing: border-box;
 }
 
-.sidebar_titulo{
-    text-align: left; 
-    margin-left: 20px;
-}
 
-.principal_texto {
-    color: var(--cor-quaternaria);
-}
 
 .principal_img {
     margin: 20px;
@@ -223,3 +216,5 @@ body {
         position: static;
     }
 }
+
+
